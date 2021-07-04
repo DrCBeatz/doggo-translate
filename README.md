@@ -1,5 +1,5 @@
 # doggo-translate
-Doggolingo translation project
+Doggolingo translation web app
 
 http://doggo-translate.com/
 

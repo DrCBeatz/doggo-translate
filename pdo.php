@@ -1,15 +1,19 @@
-
 <?php
 
-// echo "<pre>\n";
+    //Get Heroku ClearDB connection information
+    $cleardb_url      = parse_url(getenv("CLEARDB_GREEN_URL"));
+    $cleardb_server   = $cleardb_url["host"];
+    $cleardb_username = $cleardb_url["user"];
+    $cleardb_password = $cleardb_url["pass"];
+    $cleardb_db       = substr($cleardb_url["path"],1);
 
-// stores connection to database in object called $PDO
-$pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_1c173b5d5bc86a2','b89a80ef248678','zap');
-// $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;port=8889;dbname=heroku_1c173b5d5bc86a2','b89a80ef248678','zap');
-mysql://b89a80ef248678:2a576ba3@us-cdbr-east-06.cleardb.net/heroku_1c173b5d5bc86a2?reconnect=true
-// Tuns on error messages in PDO
-
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    try {
+        $pdo = new PDO("mysql:host=".$cleardb_server."; dbname=".$cleardb_db, $cleardb_username, $cleardb_password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $pdo = null;
+    } catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+        die();
+    }
 
 ?>

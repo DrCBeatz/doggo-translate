@@ -71,10 +71,10 @@ if (isset($_POST['email']) && isset($_POST['pass']) ) {
     <ul class="nav navbar-nav navbar-right">
       <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
       <?php
-      if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 4) {
+      if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 14) {
           echo '<li class="active"><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Admin Logout</a></li>';
       }
-      else if ( isset($_SESSION["name"]) && $_SESSION['user_id'] == 4) {
+      else if ( isset($_SESSION["name"]) && $_SESSION['user_id'] == 14) {
           echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Guest Logout</a></li>';
       }
       else {

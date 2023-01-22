@@ -40,7 +40,7 @@ if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
     $stmt->execute(array(':dk' => $_POST['dkey'],':dv' => $_POST['dvalue'] ) );
 
     $_SESSION['success'] = 'Entry Added';
-    header( "Location: http://doggo-translate.com/view.php" );
+    header( "Location: view.php" );
     return;
 }
 

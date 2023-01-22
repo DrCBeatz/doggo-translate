@@ -27,7 +27,7 @@ if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
              return;
          }
 
-         if ( $_SESSION['user_id'] == 4 ) {
+         if ( $_SESSION['user_id'] == 14 ) {
              $_SESSION['error'] = "Guest cannot add entries";
              header("Location: view.php");
              return;
@@ -78,8 +78,6 @@ if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
        ?>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="login.php">Admin Login</a></li> -->
-      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
       <?php
       if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 4 ) {
           echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Admin Logout</a></li>';
@@ -102,11 +100,9 @@ if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
 <?php flashMessages(); ?>
 <div class="form-group">
 <form method="post" class="form-inline">
-<!-- <p><strong>English word:</strong> -->
 <label for="dkey" class="control-label">English Term: </label>
 <input type="text" class="form-control form-horizontal" name="dkey" id="dkey" placeholder="Enter English Term" size="60"/>
 <p></p>
-<!-- <p><strong>Doggo word:</strong> -->
 <label for="dvalue" class="control-label">Doggo Term:&nbsp; </label>
 <input type="text" class="form-control form-horizontal" name="dvalue" id="dvalue" placeholder="Enter Doggo Term" size="60"/>
 <p></p>

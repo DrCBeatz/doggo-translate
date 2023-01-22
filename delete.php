@@ -22,7 +22,7 @@ if ( isset($_POST['cancel']))
 // }
 
 if ( isset($_POST['delete']) && isset($_POST['word_id']) ) {
-    if ( $_SESSION['user_id'] == 4 ) {
+    if ( $_SESSION['user_id'] == 14 ) {
         $_SESSION['error'] = "Guest cannot delete entries";
         header("Location: view.php");
         return;
@@ -75,8 +75,6 @@ if ($row === false ) {
         ?>
      </ul>
      <ul class="nav navbar-nav navbar-right">
-         <!-- <li><a href="login.php">Admin Login</a></li> -->
-       <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
        <?php
        if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 4 ) {
            echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Admin Logout</a></li>';

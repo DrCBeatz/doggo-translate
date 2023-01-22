@@ -33,7 +33,7 @@ if ($word === false ) {
 
 if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
 
-    if ( $_SESSION['user_id'] == 4 ) {
+    if ( $_SESSION['user_id'] == 14 ) {
         $_SESSION['error'] = "Guest cannot edit entries";
         header("Location: view.php");
         return;
@@ -78,8 +78,6 @@ if ( isset($_POST['dkey']) && isset($_POST['dvalue']) ) {
        ?>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="login.php">Admin Login</a></li> -->
-      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
       <?php
       if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 4 ) {
           echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Admin Logout</a></li>';
@@ -107,13 +105,11 @@ flashMessages();
 <input type="hidden" class="form-control form-horizontal" name="word_id"
 value="<?= htmlentities($_REQUEST['word_id']); ?>"
 />
-<!-- <p><strong>English Term:</strong> -->
 <label for="dkey" class="control-label">English Term: </label>
 <input type="text" class="form-control form-horizontal" name="dkey" id="dkey" size="60"
 value="<?= htmlentities($word['dkey']); ?>"
 />
 <p></p>
-<!-- <p><strong>Doggo Term:</strong> -->
 <label for="dvalue" class="control-label">Doggo Term:&nbsp; </label>
 <input type="text" class="form-control form-horizontal" name="dvalue" id="dvalue" size="60"
 value="<?= htmlentities($word['dvalue']); ?>"

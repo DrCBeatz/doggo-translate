@@ -44,8 +44,7 @@ if ( ! isset($_SESSION['user_id']) )
        ?>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="login.php">Admin Login</a></li> -->
-      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+
       <?php
       if ( isset($_SESSION["name"]) && $_SESSION['user_id'] != 4 ) {
           echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Admin Logout</a></li>';

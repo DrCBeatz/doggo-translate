@@ -10,7 +10,6 @@
     try {
         $pdo = new PDO("mysql:host=".$cleardb_server."; dbname=".$cleardb_db, $cleardb_username, $cleardb_password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        // $pdo = null;
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";
         die();

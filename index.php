@@ -239,7 +239,7 @@ if ( $new_message != "" ) {
 
 
 
-<!-- <p><a href="about.html">About Doggo Translate</a> -->
+
 
 </body>
  </html>

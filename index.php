@@ -131,7 +131,7 @@ flashMessages();
 
     <p></p>
     <label for="message" class="form-control-static">Your message: </label>
-    <textarea class="form-control" name="message" id="message" rows="4" cols="106" placeholder="Enter message to be translated"></textarea>
+    <textarea class="form-control width-100" name="message" id="message" rows="4" placeholder="Enter message to be translated"></textarea>
 <p></p>
     <input type="submit" class="btn btn-primary form-control" name="doggo_translate" onclick="return doValidate();" id="doggo_translate" value="Translate">
 

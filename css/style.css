@@ -28,6 +28,10 @@ img {
   margin-right: auto;
 }
 
+.width-100 {
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .column {
     width: 47%;

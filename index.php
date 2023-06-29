@@ -53,7 +53,8 @@ else {
 <title>Doggo Translate - Home</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php require_once "head.php"; ?><style>
+<?php require_once "head.php"; ?>
+<style>
 textarea
 {
   border:1px solid #999999;
@@ -145,7 +146,7 @@ flashMessages();
 
     <p></p>
     <label for="message" class="form-control-static">Your message: </label>
-    h<textarea class="form-control width-100" name="message" id="message" rows="4" placeholder="Enter message to be translated"></textarea>
+    <textarea class="form-control" name="message" id="message" rows="4" style="width:100%" placeholder="Enter message to be translated"></textarea>
 <p></p>
     <input type="submit" class="btn btn-primary form-control" name="doggo_translate" onclick="return doValidate();" id="doggo_translate" value="Translate">
 
